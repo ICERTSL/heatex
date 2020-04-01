@@ -4,15 +4,18 @@ from CoolProp.CoolProp import PropsSI
 import solveblockLU
 import matplotlib.pyplot as plt 
 import matplotlib.pyplot as plt1 
+import os
 
 plt.clf()
 plotname1="plot1.png"
-filename1 = "E:\Priyankith\Siddhanth_FE\heat_ex\Siddhant_heat exhanger\%s"%(plotname1)
+file_path=os.getcwd()
+print(file_path)
+filename1 = file_path+"\ "+plotname1 
 
-plotname2="plot2.png"
-filename2 = "E:\Priyankith\Siddhanth_FE\heat_ex\Siddhant_heat exhanger\%s"%(plotname2)
+plotname2="mean_plot.png"
+filename2 = file_path+"\ "+plotname2
 
-Me=300		#number of elements ,ip
+Me=5	#number of elements ,ip
 d = (3e-3)/2      # Channel square side in metres, hydraulic diameter,ip
 
 Length =1		#length of heatex, ip
@@ -23,7 +26,7 @@ nc = 150/m_dot
 m = m_dot
 m=5.495e-4
 
-N_ch = 40;				# one pair of hot and cold is one ch, ip, layers
+N_ch = 10;				# one pair of hot and cold is one ch, ip, layers
 s = 1.5e-3;             # Spacing between channels in metres,  ip
 width=s/2
 
