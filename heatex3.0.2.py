@@ -96,7 +96,6 @@ for i in range (0,N_layers,1):
 
 b = np.zeros([N_layers,r])
 
-#http://www.youtube.com/watch?v=-OeyccuOMDc
 #Turbulent fully developed smooth walled flow
 def friction_factor(x):
 	f=np.power((0.79*(np.log(x))-1.64),-2) # use blassius eqn?
